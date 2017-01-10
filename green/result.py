@@ -55,7 +55,7 @@ class ProtoTest():
             # docstring
             doc_segments = []
             if getattr(test, "_testMethodDoc", None):
-                for line in test._testMethodDoc.lstrip().split('\n'):
+                for line in test._testMethodDoc.lstrip().decode("utf8").split('\n'):
                     line = line.strip()
                     if not line:
                         break
